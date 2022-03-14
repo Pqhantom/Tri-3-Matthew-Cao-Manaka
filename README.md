@@ -11,6 +11,7 @@ CSP stuff ᕕ( ᐛ )ᕗ
 ### [Link to Data Structures project Page](https://pqhantom.github.io/Tri-3-Matthew-Cao-Manaka/datastructures)
 ### [Link to Collegeboard/Create Task Page](https://pqhantom.github.io/Tri-3-Matthew-Cao-Manaka/collegeboard)
 
+### [Link to all Individual Review Tickets](https://github.com/NinjaBreadLord/grup-grass/issues/assigned/Pqhantom)
 # <u> Team Repository</u>
 
 ### [Repo](https://github.com/NinjaBreadLord/grup-grass)
