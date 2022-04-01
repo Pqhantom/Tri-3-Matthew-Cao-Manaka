@@ -5,7 +5,7 @@ from w1 import database
 from w1 import fibonacci
 from w2 import factorial
 from w2 import mathfunc
-
+from crossover import rock
 main_menu = [
     
 ]
@@ -27,6 +27,12 @@ w2_list = [
   ["Arithmetic Sequence", mathfunc.imp],
 ]
 
+   
+
+#w 3 submenu
+w3_list = [
+    ["Rock Paper Sciccors",rock.play ],
+]
 
 border = "=" * 25
 banner = f"\n{border}\nPlease Select An Option\n{border}"
@@ -38,6 +44,7 @@ def menu():
     menu_list.append(["Week 0",w0Menu])
     menu_list.append(["Week 1",w1Menu])
     menu_list.append(["Week 2",w2Menu])
+    menu_list.append(["Tigran Crossover",w3Menu])
     buildMenu(title, menu_list)
   
 
@@ -52,6 +59,10 @@ def w1Menu():
 def w2Menu():
   title = "w 2 Menu" + banner
   buildMenu(title, w2_list)
+
+def w3Menu():
+  title = "w 3 Menu" + banner
+  buildMenu(title, w3_list)
 
 def buildMenu(banner, options):
 
