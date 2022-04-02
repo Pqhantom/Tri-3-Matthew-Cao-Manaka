@@ -1,7 +1,7 @@
 {% include navbar.html %}
 
 
-# <u> Welcome to Matthew Cao-Manaka's Github Page </u>
+# <u> Matthew's GitHub Page </u>
 CSP stuff ᕕ( ᐛ )ᕗ
 
-| [GitHub Page](https://pqhantom.github.io/Tri-3-Matthew-Cao-Manaka) | [Individual Review Tickets](https://github.com/Pqhantom/Tri-3-Matthew-Cao-Manaka/issues/assigned/Pqhantom) | [Team Repo](https://github.com/NinjaBreadLord/grup-grass) |
+## | [GitHub Page](https://pqhantom.github.io/Tri-3-Matthew-Cao-Manaka) | [Individual Review Tickets](https://github.com/Pqhantom/Tri-3-Matthew-Cao-Manaka/issues/assigned/Pqhantom) | [Team Repo](https://github.com/NinjaBreadLord/grup-grass) |
