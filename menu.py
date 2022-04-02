@@ -6,6 +6,7 @@ from w1 import fibonacci
 from w2 import factorial
 from w2 import mathfunc
 from crossover import ad
+from crossover import guess
 main_menu = [
     
 ]
@@ -30,6 +31,7 @@ w2_list = [
 #w 3 submenu
 w3_list = [
   ["Adventure", ad.go],
+  ["Guessing Game", guess.go]
 ]
 
   
