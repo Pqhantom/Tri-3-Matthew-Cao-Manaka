@@ -20,7 +20,13 @@ w0_list = [
 #w 1 submenu
 w1_list = [
   ["Fibonacci", fibonacci.Fibonacci],
-  ["Database", database.for_loop]
+  ["Database", database.tester]
+]
+
+alist = [
+  ["Database For Loop", database.for_loop],
+  ["Database While Loop", database.while_loop],
+  ["Database Recursive Loop", database.rec_loop],  
 ]
 
 #w 2 submenu
@@ -57,8 +63,12 @@ def w0Menu():
   
 def w1Menu():
   title = "w 1 Menu" + banner
+  w1_list.append(["Database alternate printing options", amenu],)
   buildMenu(title, w1_list)
 
+def amenu():
+  title = "Alternate Printing Options" + banner
+  buildMenu(title, alist)
 def w2Menu():
   title = "w 2 Menu" + banner
   buildMenu(title, w2_list)

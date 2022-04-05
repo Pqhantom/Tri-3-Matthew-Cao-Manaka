@@ -30,8 +30,7 @@ InfoDb.append({
 #prints the all the data
 def print_data(n):
   print(InfoDb[n]["FirstName"], InfoDb[n]["LastName"])
-  print("Age: ",(InfoDb[n]["Age"]),)
-  
+  print("\t","Age: ",(InfoDb[n]["Age"]),)
   print("\t", "Prefered Ice Cream Flavor: ", end="")
   print(",".join(InfoDb[n]["Prefered"]))
   print()
@@ -40,7 +39,7 @@ def tester():
     print("For loop")
     for_loop()
     print("While loop")
-    while_loop(0) 
+    while_loop() 
     print("Recursive loop")
     recursive_loop(0) 
 
@@ -48,7 +47,8 @@ def for_loop(): #prints usinga for loop C:
     for n in range(len(InfoDb)):
         print_data(n)
 
-def while_loop(n): #prints using a while loop
+def while_loop(): #prints using a while loop
+    n = 0
     while n < len(InfoDb):
         print_data(n)
         n += 1
@@ -60,3 +60,5 @@ def recur_loop(n):   # omits n amount of times
     recur_loop(n+1)
     return 
 
+def rec_loop():
+  recur_loop(0)
