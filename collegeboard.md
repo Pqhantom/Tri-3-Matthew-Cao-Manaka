@@ -3,82 +3,60 @@
 
 
 # Create Task Here
-[Code](https://github.com/danaylevy2004/thesuperidolenthusiasts/blob/main/templates/createtask/hangman.html)
+[Code](https://github.com/Pqhantom/Mathue-s-Cre8-Task/blob/main/trivia.py)
     
 ### Written Response
-3a <br />
-i. Describes the overall purpose of the program <br /> 
-The purpose of the program is to entertain the user while also being a helpful study tool. <br>
-ii. Describes what functionality of the program is demonstrated in the video  <br />
-The program will display the word that the user will need to guess with the actual letters replaced with underscores. The user than fills in a text box with their guess. the program will take that guess and compare it with the secret word. this repeats until the user either gives up or gets the word. <br>
-iii. Describes the input and output of the program demonstrated in the video <br />
-the input is the user's guesses and the output is the underscores changing to their correct guesses and upon completion of the game a note that congratulates them for finishing. <br>
+3a. 
+The purpose of the program is to determine whether or not the user is human enough to answer basic questions about animals correctly. The program can also serve to gauge whether or not the user should be respected amongst their peers or not. The user is asked a question and is instructed to type a response. The program will determine whether or not the user is correct and give them an appropriate response. The input of the program is the user’s answer and the output of the program is whether or not they were correct. 
 
-3b two code segments <br />
-i. The first program code segment must show how data have been stored in the list.  <br />
-```
-var words = ["database", "variables", "python", "collaboration", "html", "java", "binary", "string", "data", "data abstraction", "crud", "deployment", "binary search", "binary search", "bits", "bytes", "router",];
-```
+3b. i
+	qadb = [] 
+qadb.append({
+  "Question": "What animal goes Meow?",
+  "Answer": "cat"
+})
+qadb.append({
+  "Question": "What animal goes Moo?",
+  "Answer": "cow"
+})
+qadb.append({
+  "Question": "What animal goes woof?",
+  "Answer": "dog"
+})
 
- <br>
-ii. The second program code segment must show the data in the same list being used, such as creating new data from the existing data or accessing multiple elements in the list, as part of fulfilling the program’s purpose.  <br />
+ii.
+def brain():
+  print("In order to prove your humanity please type the answer to the following question.")
+  n = random.randint(0, 2)
+  question = qadb[n]["Question"]
+  x = input(question + "\n")
+  checker(x, n, question) 
+Iii-v.
+The name of the list being used in the program is qadb which stands for Question Answer DataBase. The data that is contained in the list is, well, a Question and an Answer. The list manages complexity in my program because if I didn’t use a list the only other way I’d know how to make this is to have each question and answer set be in separate functions with all of the code to check for the user’s input and correctness underneath. Then I would have the program randomly choose the whole set of question, answer, input code, and output code. In other words it would probably triple the length of my program with redundant code. 
 
-```
-var word = words[Math.floor(Math.random() * words.length)];
-```
 
-iii.  Identifies the name of the list being used in this response <br />
-The name of the list is *words* and you can see it being used in the second snippet of code. 
-iv.  Describes what the data contained in the list represent in your program <br />
-The data contained in the list is the words/terms that are being used in the hangman game. 
-v. Explains how the selected list manages complexity in your program code by explaining why your program code could not be written, or
-how it would be written differently, if you did not use the list <br />
-The way the program works as a whole is that it picks a single word for the user to guess, if there were not to be a list the program would only be able to display one word for the user to guess over and over. In other words the list allows the user to play the game more times than one. 
 
-3c two code segments <br />
-i. The first program code segment must be a student-developed procedure that: <br />
-□ Defines the procedure’s name and return type (if necessary) <br />
-□ Contains and uses one or more parameters that have an effect
-on the functionality of the procedure <br />
-□ Implements an algorithm that includes sequencing, selection,
-and iteration  <br />
+3c. i
+	def checker(x, n, question): # procedure with three parameters
+  if x == qadb[n]["Answer"]: # selection
+   print("C O N G R A T U L A T I O N S  Y O U  A R E  A  H U M A N !")
+   quit()
+   
+  else: 
+    while x != question: # iteration 
+      print("Unfortunately you are a robot.")
+      x = input(question + "\n") # sequencing
+      checker(x, n, question)
+ii.
+	def brain():
+  print("In order to prove your humanity please type the answer to the following question.")
+  n = random.randint(0, 2)
+  question = qadb[n]["Question"]
+  x = input(question + "\n")
+  checker(x, n, question) # call to procedure
+Iii-iv.
+The algorithm’s name is checker and what it does is it gets three parameters; x, n, and question. These three parameters lets the program know what the user’s input was, which question and answer set is being used, and the question that is being used. When the algorithm is called the first thing that it does is compare the answer to the user’s response and sees if they are the same. If they are the same it will print out a message telling them they are right and then end the program. If it sees that the user’s input is not the same as the answer it will instead display a message telling them that they are not correct and start a loop that will allow the user to keep guessing until they get it right. 
 
-```
-while (remainingLetters > 0) {
-        alert(answerArray.join(" "));
-        var guess = prompt ("Guess a letter.");
-    }
-```
-
-ii. The second program code segment must show where your student-developed procedure is being called in your program. <br />
-
-```
-if (guess == null){
-            break;
-        }    // !== not equal to   (one)
-        else if (guess.length !== 1){
-            alert("Please use a single letter.");
-        }
-        else {
-            for (var j = 0; j < word.length; j++){
-                if (word[j] === guess ){
-                    answerArray [j] = guess;
-                    remainingLetters--;
-                }
-            }
-        }
-```
-
-iii. Describes in general what the identified procedure does and how it contributes to the overall functionality of the program <br />
-The procedure above is taking the user inputs and comparing them to the remaining letters everytime the user makes an new input in order to see if there is a correct letter found. 
-iv. Explains in detailed steps how the algorithm implemented in the identified procedure works. Your explanation must be detailed enough for someone else to recreate it. <br />
-The way the Algorithm above works is that while there are remaining letters for the user to guess the program will prompt the user to make an input. When the user inputs a single letter the algorithm will check to see if it is a correct word. if the user inputs more than one letter the algorithm will instead ask the user to only submit one letter. 
-
-3d <br />
-i. Describes two calls to the procedure identified in written response 3c. Each call must pass a different argument(s) that causes a different segment of code in the algorithm to execute. <br />
-Our code uses a while statement which means that instead of calling the procedure each time the user submits an answer it will automatically take the submission and compare the input to the answer. An example of this working would be if the secret word was python and the user guessed "o" the algorithm would see that the o is a correct letter and so it will replace one of the underscores with an o instead. 
-
-ii.  Describes what condition(s) is being tested by each call to the procedure  <br />
-The condition that is being tested by each call is whether or not the input letter is one that matches with a letter in the secret word. Continuing the example above the condition being tested is whether or not there is an o in the word python (there is so it is true).
-iii. Identifies the result of each call <br />
-the result of the call when it is true is that the program will update the displayed string of underscores to let the user know how many letters they have to guess. Python will be displayed as "_ _ _ _ _ _" and when they guess a correct letter like o it will be updated to show "_ _ _ _ o _". 
+3d. 
+The first test case is if the user gets the question right on the first try. If the question is, “What animal goes meow?” and the user types “cat” then the program will print a message telling them that they are right and end. In the second case if the user instead types “dog” for the question, “what animal goes meow?” it will tell them that they are wrong and ask them the question again. If they continue to get the question wrong the program will simply keep telling them so and asking the same question until they get it right. Once they get it right it will congratulate them and end. 
+The first test case is if the user gets the question right on the first try. If the question is, “what animal goes meow?” and the user types “cat” the program will compare their input with the answer from the list. Since the input matches it will tell the user that they are right and end the program. In the Second scenario the user will get the answer wrong multiple times before getting the right answer. If the question is still, “what animal goes meow?” but this time the user responds with “dog” then the program will compare the answer with the input and see that they do not match. Because they do not match and therefore are wrong the program will now tell the user that they are wrong and ask them the question again. It will keep telling them that it is wrong and ask them the question until they respond with the correct answer. 
