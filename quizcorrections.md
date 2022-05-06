@@ -14,3 +14,9 @@ Q14 I simply made a mathematical mistake all you had to do was take the number a
 Q25 I chose the privacy risk instead of the benefit to the user which was an accident. 
 Q39 I was honestly being lazy and didn’t actually convert the binary string into decimal
 
+week 3 quiz 5
+q3 I missread one of the answers and thought that the right thing was negative. 
+q7 to get thre correct answer you have to find the one where when you raise base 2 to x it makes it so that you get something that is 100 or more
+q11 I chose the answer that I did because I forgot what tcp and ip was. 
+q16 I missread the question and got it wrong. 
+q28 I forgot to check the age value of the test case and thought that he was older than 65 when he was only 20. 
