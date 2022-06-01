@@ -3,4 +3,4 @@
 
 This is where I'll document my deployment progress I guess? 
 
-<img src="https://cs-p-hq.slack.com/files/U02CG1MU400/F03HK35GZ8E/image.png">
+<img src="https://slack-files.com/TUDAF53UJ-F03HK35GZ8E-797a26509b">
